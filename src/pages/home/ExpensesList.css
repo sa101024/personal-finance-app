@@ -1,0 +1,64 @@
+.expenses-list {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 20px;
+  background: #fff;
+}
+.content-expense {
+  margin: 30px auto;
+  border: 1px solid #f2f2f2;
+  box-shadow: 3px 3px 5px rgba(50,50,50,0.1);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-left: 4px solid #46BDC6;
+}
+.content-income {
+  margin: 30px auto;
+  border: 1px solid #f2f2f2;
+  box-shadow: 3px 3px 5px rgba(50,50,50,0.1);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-left: 4px solid #DD7E6B;
+}
+
+.expenses .date {
+  margin-right: 40px;
+  text-decoration: none;
+}
+.expenses .category {
+  margin-right: 40px;
+  text-decoration: none;
+}
+.expenses .accountTitle {
+  margin-right: 40px;
+  text-decoration: none;
+}
+.expenses .amount {
+  margin-right: 40px;
+  text-decoration: none;
+}
+.expenses .details {
+  margin-right: 40px;
+  text-decoration: none;
+}
+
+.expenses button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ddd;
+  color: #777;
+  border: none;
+  padding: 12px 8px;
+  text-align: center;
+  line-height: 0;
+  font-size: 0.9em;
+  cursor: pointer;
+}

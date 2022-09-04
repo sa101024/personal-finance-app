@@ -1,0 +1,44 @@
+.navbar {
+  width: 100%;
+  padding: 30px 0;
+  box-sizing: border-box;
+  margin-bottom: 80px;
+}
+.navbar ul {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar li {
+  display: flex;
+  align-items: center;
+}
+.navbar .title {
+  font-weight: bold;
+  color: var(--heading-color);
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+.navbar .links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.navbar a {
+  color: #333;
+  text-decoration: none;
+  margin-left: 20px;
+}
+.navbar .user {
+  display: flex;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-right: 10px;
+}
+.navbar button {
+  margin-left: 20px;
+}
