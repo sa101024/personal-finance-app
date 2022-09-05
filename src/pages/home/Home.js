@@ -11,7 +11,6 @@ import './Home.css'
 export default function Home() {
   const { user } = useAuthContext()
   const { documents, error } = useCollection(
-    // 'expenses'
     'expenses',
     ['uid', '==', user.uid],
     ['date', 'asc']
