@@ -10,12 +10,13 @@ export const useCollection = (c, _q, _orderBy) => {
 
   // set up query
   const q = useRef(_q).current
+  const ob = useRef(_orderBy).current
 
   useEffect(() => {
     let ref = collection(db, c)
 
     if (q) {
-      ref = query(ref, where(...q), orderBy(..._orderBy))
+      ref = query(ref, where(...q), orderBy(...ob))
     }
 
     const unsubscribe = onSnapshot(ref, (snapshot) => {
@@ -34,7 +35,7 @@ export const useCollection = (c, _q, _orderBy) => {
 
     // unsubscribe on unmount
     return () => unsubscribe()
-  }, [c, q, _orderBy])
+  }, [c, q, ob])
 
   return { documents, error }  
 }
