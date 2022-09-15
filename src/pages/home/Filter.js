@@ -1,4 +1,4 @@
-const filterList = ['All', '支出', '収入', '光熱費', '食費雑費', '本、映画', 'その他-収入', 'その他-支出']
+const filterList = ['All', '支出', '収入', '光熱費', '食費雑費', '本、映画', 'その他収入', 'その他支出']
 
 export default function Filter({ currentFilter, changeFilter }) {
   const handleClick = (newFilter) => {
