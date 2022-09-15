@@ -31,7 +31,7 @@ export default function CreateForm({ uid }) {
   const [accountTitle, setAccountTitle] = useState(''); 
   const [formError, setFormError] = useState(null);
 
-  // date
+  // set month
   useEffect(() => {
     if (date !== '') {
       const dateElm = date.split('-')
@@ -40,14 +40,14 @@ export default function CreateForm({ uid }) {
     }
   }, [date])
 
-  // category
+  // clear accountTitle
   useEffect(() => {
     if (category !== '') {
       setAccountTitle('')
     }
   }, [category])
 
-  // amount
+  // reject non-numeric values and add commas
   useEffect(() => {
     setFormError(null)
     if (amount.match(/[ぁ-ん]|[ァ-ヴ]|[ｦ-ﾟ]|[a-zA-Z]|[Ａ-Ｚａ-ｚ]/)) {
@@ -79,6 +79,9 @@ export default function CreateForm({ uid }) {
       return
     }
 
+    // switch positive/negative number
+    let amountValue = category.value === 'expense' ? ('-' + amount) : amount
+
     // add new document
     const expense = {
       month,
@@ -88,7 +91,7 @@ export default function CreateForm({ uid }) {
       category: category.label,
       accountTitle: accountTitle.label,
       details,
-      amount
+      amount: amountValue
     }
     await addDocument(expense)
   } 
