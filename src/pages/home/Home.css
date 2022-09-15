@@ -57,7 +57,8 @@ label {
   display: flex;
   padding: 10px;
   background: #fff;
-  border-radius: 4px;
+  border-radius: 4px 4px 0 0;
+  color: var(--heading-color);
 }
 .home-filter p {
   font-size: 0.9em;
@@ -78,4 +79,21 @@ label {
 }
 .home-filter button.active {
   color: var(--primary-color)
+}
+/* total */
+.home-total {
+  display: flex;
+  padding: 10px;
+  background: #fff;
+  border-radius: 0 0 4px 4px;
+}
+.home-total p {
+  color: var(--heading-color);
+  font-size: 0.9em;
+  margin-right: 10px;
+}
+.home-total span {
+  font-size: 0.9em;
+  font-weight: bold; 
+  color: var(--text-color);
 }
