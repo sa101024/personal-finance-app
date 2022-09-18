@@ -9,7 +9,6 @@ import Filter from './Filter';
 
 // styles
 import './Home.css'
-// import ExpensesTotal from './ExpensesTotal';
 
 export default function Home() {
   const [currentFilter, setCurrentFilter] = useState('All')
@@ -47,7 +46,7 @@ export default function Home() {
     const calcTotal = async() => {
       let sum = 0
       const expenseAmountList = await expenses ? expenses.map((expense) => expense.amount.split(',')) : null
-      expenseAmountList.forEach(expenseAmount => {
+      await expenseAmountList.forEach(expenseAmount => {
         let number = Number(expenseAmount.join(''))
           sum += number
       })
