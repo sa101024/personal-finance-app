@@ -16,7 +16,7 @@ const expenses = [
   { value: 'utility', label: '光熱費' },
   { value: 'saving', label: '貯金' },
   { value: 'withdraw', label: '引出' },
-  { value: 'glossary', label: '食費雑費' },
+  { value: 'groceries', label: '食費雑費' },
   { value: 'books', label: '本、映画' },
   { value: 'other', label: 'その他' }
 ]
