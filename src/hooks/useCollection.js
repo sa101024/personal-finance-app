@@ -15,7 +15,7 @@ export const useCollection = (c, _q, _orderBy) => {
   useEffect(() => {
     let ref = collection(db, c)
 
-    if (q) {
+    if (q && ob) {
       ref = query(ref, where(...q), orderBy(...ob))
     }
 
