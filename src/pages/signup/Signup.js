@@ -65,7 +65,7 @@ export default function Signup() {
           />
         </label>
         <label>
-          <span>profile thumbnail:</span>
+          <span>profile thumbnail(optional):</span>
           <input
             type="file"
             onChange={handleFileChange}
